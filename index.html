@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Scientific Calculator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calculator-container">
+            <div id="display" class="display-box">0</div>
+
+               <div class="flex-container">
+                <button data-direct-value="pi">&Pi;</button>
+                <button data-unary-operation="!">x!</button>
+                <button data-val="(">(</button>
+                <button data-val=")">)</button>
+                <button data-val="%">%</button>
+                <button id="clear-btn">C</button>
+            </div>
+
+             <div class="flex-container">
+                <button data-direct-value="e">e</button>
+                <button data-unary-operation="ln">ln</button>
+                <button data-val="7">7</button>
+                <button data-val="8">8</button>
+                <button data-val="9">9</button>
+                <button data-val="/">&divide;</button>
+            </div>
+
+            <div class="flex-container">
+                <button id="10RaiseXOr2RaiseX" data-unary-operation="10^">10<sup>x</sup></button>
+                <button id="logOrERaiseX" data-unary-operation="log">log</button>
+                <button data-val="4">4</button>
+                <button data-val="5">5</button>
+                <button data-val="6">6</button>
+                <button data-val="*">x</button>
+            </div>
+
+            <div class="flex-container">
+                <button id="backspace-btn"><span class="material-symbols-outlined">back</span></button>
+                <button id="sqrtOrCuberoot" data-unary-operation="sqrt">&#8730;</button>
+                <button data-val="1">1</button>
+                <button data-val="2">2</button>
+                <button data-val="3">3</button>
+                <button data-val="-">-</button>
+            </div>
+
+             <div class="flex-container">
+                <button data-unary-operation="exp">exp</button>
+                <button data-val="**">x<sup>y</sup></button>
+                <button data-val="0">0</button>
+                <button data-val=".">.</button>
+                <button data-val="=">=</button>
+                <button data-val="+">+</button>
+            </div>
+
+        </div>
+    </div>
+
+   <script src="app.js"></script>
+
+</body>
+</html>
+

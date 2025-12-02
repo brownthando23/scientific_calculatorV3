@@ -1,0 +1,131 @@
+/* ================================
+   GLOBAL LAYOUT
+=================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #d6eff0;
+}
+
+/* Center calculator vertically + horizontally */
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================================
+   CALCULATOR CONTAINER
+=================================== */
+
+.calculator-container {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 14px;
+    width: 380px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* ================================
+   DISPLAY SCREEN
+=================================== */
+
+.display-box {
+    padding: 20px;
+    background: #ecf7ff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 32px;
+    font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+    user-select: none;
+}
+
+
+/* ================================
+   BUTTON GRID ROWS
+=================================== */
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* ================================
+   BUTTON STYLING
+=================================== */
+
+button {
+    flex: 1;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+    background: #f2f2f2;
+    border: 1px solid #999;
+    border-radius: 8px;
+
+    transition: background 0.15s, transform 0.1s;
+    user-select: none;
+}
+
+button:active {
+    background: #dcdcdc;
+    transform: scale(0.96);
+}
+
+
+/* Special styles for operators */
+button[data-val="+"],
+button[data-val="-"],
+button[data-val="*"],
+button[data-val="/"],
+button[data-val="%"],
+button[data-val="="],
+button[data-unary-operation],
+button[data-direct-value] {
+    background: #e8f0ff;
+    border-color: #5c7ec1;
+}
+
+button[data-val="="] {
+    background: #4a84ff;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Clear and Backspace buttons */
+#clear-btn,
+#backspace-btn {
+    background: #ff9c9c;
+    border-color: #d75b5b;
+}
+
+#clear-btn:hover,
+#backspace-btn:hover {
+    background: #ff7b7b;
+}
+
+
+/* Icons in backspace button */
+.material-symbols-outlined {
+    font-size: 20px;
+    vertical-align: middle;
+}
